@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CreatePage extends StatelessWidget {
+class EditPage extends StatelessWidget {
 
   TextEditingController ctrl = TextEditingController();
 
@@ -8,7 +8,7 @@ class CreatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nova Nota"),
+        title: Text("Edita Nota"),
         actions: [
           IconButton(
             onPressed: () {

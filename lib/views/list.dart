@@ -21,6 +21,7 @@ class ListPage extends StatelessWidget {
       ),
       body: ListView(
         children: notas.map((nota) => ListTile(
+          onTap: () => Navigator.pushNamed(context, '/edit'),
           title: Text(
             nota.title,
             maxLines: 1,
@@ -33,14 +34,3 @@ class ListPage extends StatelessWidget {
     );
   }
 }
-
-
-// ListTile(
-//             title: Text(
-//               "Anotações de Aula",
-//               maxLines: 1,
-//               overflow: TextOverflow.ellipsis,
-//             ),
-//             subtitle: Text("23/09/2025"),
-//             trailing: Icon(Icons.chevron_right),
-//           )

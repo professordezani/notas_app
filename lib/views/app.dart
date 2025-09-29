@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'list.dart';
 import 'create.dart';
+import 'edit.dart';
 
 class NotasApp extends StatelessWidget {
 
@@ -11,6 +12,7 @@ class NotasApp extends StatelessWidget {
       routes: {
         "/list": (context) => ListPage(),
         "/create": (context) => CreatePage(),
+        "/edit": (context) => EditPage(),
       },
       initialRoute: "/list",
     );
