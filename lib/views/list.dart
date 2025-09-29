@@ -21,7 +21,11 @@ class ListPage extends StatelessWidget {
       ),
       body: ListView(
         children: notas.map((nota) => ListTile(
-          title: Text(nota.title),
+          title: Text(
+            nota.title,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
           subtitle: Text(DateFormat.yMd('en_US').format(nota.date)),
           trailing: Icon(Icons.chevron_right_outlined),
         )).toList()

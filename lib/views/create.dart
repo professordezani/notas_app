@@ -14,6 +14,21 @@ class CreatePage extends StatelessWidget {
           )
         ],
       ),
+      body: Container(
+        margin: EdgeInsets.all(10),
+        child: TextField(
+          keyboardType: TextInputType.multiline,
+          //obscureText: true,
+          minLines: 1,
+          maxLines: null,
+          decoration: InputDecoration(
+            hintText: "Digite suas anotações...",
+            border: InputBorder.none,
+            // filled: true,
+            // fillColor: Colors.amber
+          ),
+        ),
+      )
     );
   }
 }
