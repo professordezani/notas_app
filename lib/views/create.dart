@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../models/nota.dart';
+import '../viewmodels/notaviewmodel.dart';
 
 class CreatePage extends StatelessWidget {
 
@@ -13,6 +16,8 @@ class CreatePage extends StatelessWidget {
           IconButton(
             onPressed: () {
               // Salvar num banco de dados local (em memória).
+              var provider = Provider.of<NotaViewModel>(context, listen: false);
+              provider.create(Nota("1", ctrl.text, DateTime.now()));
               Navigator.pop(context);
             },
             icon: Icon(Icons.save)

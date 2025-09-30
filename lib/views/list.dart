@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:notas_app/viewmodels/notaviewmodel.dart';
 import '../models/nota.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class ListPage extends StatelessWidget {
 
-  List<Nota> notas = [
-    Nota("1", "Anotações de aula", DateTime.now()),
-    Nota("2", "Anotações de trabalho", DateTime.now()),
-    Nota("3", "Anotações de festas", DateTime.now()),
-    Nota("4", "Anotações de livros", DateTime.now()),
-  ];
-
   @override
   Widget build(BuildContext context) {
+
+    var provider = Provider.of<NotaViewModel>(context, listen: true);
+
     return Scaffold(
       appBar: AppBar(title: Text("Notas")),
       floatingActionButton: FloatingActionButton(
@@ -20,7 +18,7 @@ class ListPage extends StatelessWidget {
         child: Icon(Icons.add),
       ),
       body: ListView(
-        children: notas.map((nota) => ListTile(
+        children: provider.notas.map((nota) => ListTile(
           onTap: () => Navigator.pushNamed(context, '/edit'),
           title: Text(
             nota.title,
