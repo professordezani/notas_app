@@ -19,7 +19,7 @@ class ListPage extends StatelessWidget {
       ),
       body: ListView(
         children: provider.notas.map((nota) => ListTile(
-          onTap: () => Navigator.pushNamed(context, '/edit'),
+          onTap: () => Navigator.pushNamed(context, '/edit', arguments: nota),
           title: Text(
             nota.title,
             maxLines: 1,
