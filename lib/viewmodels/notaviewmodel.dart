@@ -18,7 +18,7 @@ class NotaViewModel extends ChangeNotifier {
   }
 
   void delete(String id) {
-    // apaga dos da lista
+    _notas.removeWhere((e) => e.id == id);
     notifyListeners();
   }
 
