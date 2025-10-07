@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models/nota.dart';
 import 'package:uuid/uuid.dart';
+import '../models/nota.dart';
 
 class NotaViewModel extends ChangeNotifier {
 
@@ -17,7 +17,7 @@ class NotaViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void delete(int id) {
+  void delete(String id) {
     // apaga dos da lista
     notifyListeners();
   }
